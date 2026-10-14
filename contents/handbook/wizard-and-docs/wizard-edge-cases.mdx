@@ -16846,7 +16846,7 @@ if (isFullyCancelled(answers)) askAccounting.refund(args.subject)
 **Impact.** Users who just stepped away have the run killed as if they refused, after paying full agent startup.
 
 ```text file=Generic agent
-3. On cant (at any point): emit exactly
+3. On can't (at any point): emit exactly
    [ABORT] github connection declined
    and stop.
 // wizard_ask timeout resolves to the same __cancelled__ as a decline
