@@ -24,7 +24,7 @@ Much of the wizard is deterministic code around the agent:
 
 - **Deterministic tools.** When we know the exact shape we want, a tool does the work instead of the model, so the agent can't fumble it. Tools fetch the project ID and token, write env vars with the names our docs use, detect the package manager, and scan the project for self-driving. See [architecture](/handbook/wizard-and-docs/wizard-architecture#mcp-tools).
 - **Deterministic scope.** A model often stops short of a complete setup. It skips steps like identifying users, which quietly damages a user's data for good. A program adds required steps and checks, so the wizard verifies those steps happen. A run with tasks left open never reports success.
-- **[Warlock](https://github.com/PostHog/warlock).** It scans everything the agent writes, and stops the mistakes models are prone to make, like leaking secrets. <TeamMember name="Sarah Sanders" /> leads the work on it. See [architecture](/handbook/wizard-and-docs/wizard-architecture).
+- **[Warlock](https://github.com/PostHog/warlock).** It scans everything the agent writes, and stops the mistakes models are prone to make, like leaking secrets. See [architecture](/handbook/wizard-and-docs/wizard-architecture).
 - **Tailored skills and harness.** We write each skill for the model and effort level that runs it. This keeps runs about as cheap and fast as they can be. A frontier model like Fable can reach the same correctness but likely takes longer.
 
 ## What it does today
