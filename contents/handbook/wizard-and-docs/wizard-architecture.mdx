@@ -164,7 +164,7 @@ The switchboard decides what model runs each task at what effort on which SDK.
 | The skill | Each task prompt in the [context mill](/handbook/wizard-and-docs/context-mill) sets `model_pi`, `effort_pi`, `model_sdk`, and `effort_sdk` | The program |
 | The program | Its `ProgramBinding` sets the default sequence, harness, model, and effort | Nothing, it's the base |
 
-Every run logs which rung decided each axis, so analytics can tell a flag-driven run from a default one. Adding a new model also needs the gateway and the token mint to allow it.
+Every run logs which rung decided each axis, so analytics can tell a flag-driven run from a default one. To add a model, add it to the payload of the `wizard-gateway-allowlist` feature flag in PostHog's internal project. The payload lists the models, efforts, and programs a gateway token may use. Then pin the model to a program or task through any rung of the table above.
 
 ### AI gateway tokens
 
